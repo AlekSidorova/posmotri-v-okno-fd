@@ -50,5 +50,28 @@ ol {
   background-color: #D9D9D9;
 }
 
+.page {
+  display: flex;
+  justify-content: center;
+}
 
-/* нначало работы */
+.content {
+display: grid;
+justify-content: center;
+grid-template-columns: 1fr 1fr 1fr 30px 1fr;
+grid-template-rows: repeat(3, 1fr);
+align-items: end;
+height: 534px;
+}
+
+.content__list-container {
+  overflow: scroll;
+}
+
+.result {
+  grid-area: 1 / 2 / 1 / 4;
+}
+
+.content__details {
+  grid-area: 1 / 4 / 5 / 6;
+}
