@@ -87,9 +87,8 @@ ol {
 
 .search-form {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  padding-top: 24px;
+  gap: 39px;
+  padding-top: 17px;
 }
 
 .content__list-container {
@@ -255,3 +254,22 @@ ol {
   text-decoration: underline;
 }
 
+.button {
+  border: 1px solid #fff;
+  background-color: transparent;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  height: 34px;
+}
+
+.search-form__submit-button {
+  padding: 0 69px;
+  margin-top: 18px;
+}
+
+.more-button {
+  padding: 0 134px;
+  white-space: nowrap;
+}
