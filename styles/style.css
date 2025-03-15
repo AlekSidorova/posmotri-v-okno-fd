@@ -171,6 +171,7 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+  
 }
 
 .search-form__checkbox-list {
@@ -200,11 +201,57 @@ ol {
   appearance: none;
 }
 
-.search-form__textfield:focus {
+.search-form__textfield:active{  /* НЕ РАБОТАЕТ РЕШИТЬ ПРОБЛЕМУ */
+  border: 1px solid #fff;
+}
+
+.search-form__textfield:hover {
+  cursor: text;
+}
+
+.search-form__textfield:focus { /* НЕ РАБОТАЕТ РЕШИТЬ ПРОБЛЕМУ */
   outline: none;
 }
 
-.search-form__label:has(:focus-visible) {
+.search-form__label:has(:focus-visible) { /* НЕ РАБОТАЕТ РЕШИТЬ ПРОБЛЕМУ */
   border: 1px solid #fff;
-  padding: 2px;
+  padding: 1px;
 }
+
+.search-form__checkbox-list { 
+  display: flex;
+  gap: 15px;
+  position: relative;
+}
+
+.search-form__pseudo-checkbox {
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-form__label-text {
+ padding-left: 5px;
+ font-family: inherit;
+ font-size: inherit;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 15px;
+  height: 15px;
+}
+
+ .search-form__label-checkbox:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
