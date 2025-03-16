@@ -60,16 +60,16 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 1fr 399px;
-  grid-template-rows: 1fr;
   justify-content: center;
   align-items: end;
-  gap: 30px;
+  gap: 31px;
 }
 
 .result__video-container {
   grid-area: 1 / 1 / 2 / 2;
   width: 711px;
   height: 386px;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -87,8 +87,7 @@ ol {
 
 .search-form {
   display: flex;
-  gap: 39px;
-  padding-top: 17px;
+  gap: 40px;
 }
 
 .content__list-container {
@@ -98,9 +97,13 @@ ol {
 
 .content__video-card {
   display: grid;
-  grid-template-columns: 196px 194px;
+  grid-template-columns: 198px 194px;
   grid-template-rows: 103px;
   padding-bottom: 30px;
+}
+
+.content__list-container:last-child {
+  padding-bottom: 5px;
 }
 
 .content__video-card-thumbnail {
@@ -122,7 +125,7 @@ ol {
 }
 
 .title {
-  padding-bottom: 26px;
+  padding-bottom: 24px;
   font-family: "Oswald", sans-serif;
   font-size: 75px;
   line-height: 94%;
@@ -208,11 +211,11 @@ ol {
   cursor: text;
 }
 
-.search-form__textfield:focus { /* НЕ РАБОТАЕТ РЕШИТЬ ПРОБЛЕМУ */
+.search-form__textfield:focus { 
   outline: none;
 }
 
-.search-form__label:has(:focus-visible) { /* НЕ РАБОТАЕТ РЕШИТЬ ПРОБЛЕМУ */
+.search-form__label:has(:focus-visible) {
   border: 1px solid #fff;
   padding: 1px;
 }
@@ -262,14 +265,14 @@ ol {
   font-weight: 700;
   font-size: 18px;
   height: 34px;
+  white-space: nowrap;
 }
 
 .search-form__submit-button {
-  padding: 0 69px;
-  margin-top: 18px;
+  padding: 0 70px;
+  margin-top: 20px;
 }
 
 .more-button {
-  padding: 0 134px;
-  white-space: nowrap;
+  width: 100%;
 }
